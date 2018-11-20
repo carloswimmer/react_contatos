@@ -13,12 +13,20 @@ class App extends Component {
       this.setState({ contacts })
     })
   }
+  removeContact = contact => {
+    this.setState(state => ({
+      contacts: state.contacts.filter(item => item.id !== contact.id)
+    }))
+
+    ContactsAPI.remove(contact)
+  }
 
   render() {
     return (
       <div>
         <Route exact path='/' render={() => (
           <ListContacts
+            onDeleteContact={this.removeContact}
             contacts={this.state.contacts}
           ></ListContacts>
         )}>

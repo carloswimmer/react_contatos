@@ -7,7 +7,7 @@ import sortBy from 'sort-by';
 class ListContacts extends Component {
   static propTypes = {
     contacts: PropTypes.array.isRequired,
-    // onDeleteContact: PropTypes.func.isRequired
+    onDeleteContact: PropTypes.func.isRequired
   }
 
   state = {
@@ -23,8 +23,7 @@ class ListContacts extends Component {
   }
 
   render() {
-    // const { contacts, onDeleteContact } = this.props
-    const { contacts } = this.props
+    const { contacts, onDeleteContact } = this.props
     const { query } = this.state
 
     let showingContacts
@@ -67,6 +66,9 @@ class ListContacts extends Component {
                 <p>{contact.name}</p>
                 <p>{contact.email}</p>
               </div>
+              <button onClick={() => onDeleteContact(contact)} className='contact-remove'>
+                Remove
+              </button>
             </li>
           ))}
         </ol>
