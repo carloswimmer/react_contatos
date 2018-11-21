@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import ImageInput from './ImageInput';
+import ImageInput from './utils/ImageInput';
 import serializeForm from 'form-serialize';
 
 class CreateContact extends Component {
@@ -17,6 +17,11 @@ class CreateContact extends Component {
       <div>
         <Link className='close-create-contact' to='/'>Fechar</Link>
         <form onSubmit={this.handleSubmit} className='create-contact-form'>
+          <ImageInput
+            className='create-contact-avatar-input'
+            name='avatarURL'
+            maxHeight={64}>
+          </ImageInput>
           <div className='create-contact-details'>
             <input type='text' name='name' placeholder='Nome' />
             <input type='text' name='email' placeholder='E-mail' />
