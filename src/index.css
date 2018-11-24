@@ -78,6 +78,7 @@ body, .app {
  /* ListContacts */
  .list-contacts {
   height: fit-content;
+  min-height: 100vh;
   padding-top: 60px;
   background-image: url('./images/iluminacao1.jpg');
   background-repeat: no-repeat;
