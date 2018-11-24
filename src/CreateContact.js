@@ -14,7 +14,7 @@ class CreateContact extends Component {
 
   render() {
     return (
-      <div>
+      <div className='create-background'>
         <Link className='close-create-contact' to='/'>Fechar</Link>
         <form onSubmit={this.handleSubmit} className='create-contact-form'>
           <ImageInput
