@@ -1,5 +1,5 @@
 # Contatos (A React Project)
-Project to MBA in Frontend Development using framework React.
+Project for MBA in Frontend Development using framework React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
